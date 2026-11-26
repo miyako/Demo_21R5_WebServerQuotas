@@ -9,6 +9,8 @@
     main{width:min(420px,calc(100% - 40px));padding:32px;background:#fff;border:1px solid #e2e0da;border-radius:8px}
     h1{margin:0 0 8px;font-size:26px}
     p{margin:0 0 20px;color:#767268}
+    .language-picker{display:flex;justify-content:flex-end;align-items:center;gap:8px;margin-bottom:16px;font-size:14px}
+    .language-picker select{font:inherit}
     form{display:grid;gap:14px}
     label{display:grid;gap:5px;font-size:14px;font-weight:600}
     input{width:100%;padding:9px 10px;border:1px solid #e2e0da;border-radius:5px;font:inherit}
@@ -19,6 +21,13 @@
 </head>
 <body>
   <main>
+    <label class="language-picker" for="languageSelect">
+      <span>Language</span>
+      <select id="languageSelect" aria-label="Language">
+        <option value="en">English</option>
+        <option value="ja">日本語</option>
+      </select>
+    </label>
     <h1>Ticketing demo</h1>
     <p>Start a signed-in visitor session to try the per-session request quota.</p>
     <form id="loginForm">
@@ -31,6 +40,7 @@
     <p>These credentials are for demo purposes only. They are not verified or sent to the server.</p>
     <p id="loginStatus" role="status" aria-live="polite"></p>
   </main>
+  <script src="./i18n.js"></script>
   <script>
     const loginForm = document.getElementById('loginForm');
     const loginButton = document.getElementById('loginButton');
@@ -42,7 +52,7 @@
       loginStatus.textContent = '';
 
       try {
-        const response = await fetch('http://127.0.0.1/runDemo?authenticate=true', {
+        const response = await fetch('/runDemo?authenticate=true', {
           method: 'POST',
           credentials: 'include',
         });
@@ -50,7 +60,7 @@
         window.location.assign('./ticketingSession.html');
       } catch (error) {
         loginButton.disabled = false;
-        loginStatus.textContent = `Unable to start the session: ${error.message}`;
+        loginStatus.textContent = window.demoText('Unable to start the session: {message}', { message: error.message });
       }
     });
   </script>

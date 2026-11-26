@@ -1,48 +1,70 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>4D Web Server Quotas デモ</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif;
+      color: #17212b;
+      background: #f3f6f8;
+    }
+    body {
+      box-sizing: border-box;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: clamp(24px, 6vw, 56px) 20px;
+    }
+    main {
+      padding: clamp(24px, 5vw, 40px);
+      border: 1px solid #d6e0e8;
+      border-radius: 18px;
+      background: #fff;
+      box-shadow: 0 16px 40px rgb(23 33 43 / 8%);
+    }
+    h1 { margin-top: 0; font-size: clamp(1.7rem, 5vw, 2.4rem); line-height: 1.2; }
+    h2 { margin: 2rem 0 .4rem; font-size: 1.2rem; }
+    p { margin: .5rem 0 1rem; }
+    nav { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 1.5rem; }
+    a {
+      display: inline-block;
+      padding: 10px 16px;
+      border: 1px solid #1764ac;
+      border-radius: 8px;
+      color: #fff;
+      background: #1764ac;
+      text-decoration: none;
+      font-weight: 650;
+    }
+    a.secondary { color: #1764ac; background: transparent; }
+    a:focus-visible { outline: 3px solid #44a273; outline-offset: 3px; }
+    @media (prefers-color-scheme: dark) {
+      :root { color: #e7edf2; background: #101820; }
+      main { border-color: #334454; background: #1b2833; box-shadow: none; }
+      a.secondary { color: #92c7f5; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>4D Web Server Quotas デモ</h1>
+    <p>Web Server のクォータがリクエストやセッションを制限する動作を確認できます。</p>
+    <p>4D プロジェクトで <code>WebServerQuotas</code> フォームを開き、以下のシナリオを別々のブラウザータブでお試しください。</p>
+    <nav aria-label="デモシナリオ">
+      <a href="./ticketingLogin.html">チケット販売デモを開始</a>
+      <a class="secondary" href="./testQuotasTicketing.html">クォータのシナリオを開く</a>
+    </nav>
 
-<html>
-
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-		<title>4D Web Server Welcome Page</title>
-	    <style type="text/css">
-<!--
-h2 {
-	font: 16px Verdana, Arial, Helvetica, sans-serif;
-}
-p {
-	font: 12px Verdana, Arial, Helvetica, sans-serif;
-}
--->
-        </style>
-	</head>
-
-	<body bgcolor="#ffffff">
-		<div align="center">
-			<table border="0" cellpadding="0" cellspacing="0" width="675">
-				<tr>
-					
-      <td class="grayborder"> 
-        <h2 align="center">Welcome to your 4D Web Server default home 
-          page!</h2>
-        <p align="center">This is the <strong><b>4D Web Server</b></strong> 
-          default home page. This <strong>test page</strong> is served by 4D 
-          Application.</p>
-        <p align="center">If you are the webmaster, congratulations! Your Web 
-          server is up and running. You are seeing this page because you have 
-          not yet replaced the default &quot;index.html&quot; file with your actual 
-          home page.</p>
-        <p align="center">Instructions for configuring your 4D Web 
-          Server can be found in the included documentation.</p>
-        <p align="center"><b>IMPORTANT</b>: This Web page or Web site is neither 
-          owned nor administered by 4D SAS or any of its subsidiaries. Please contact 
-          the owner/webmaster of this site to report any problems with it.</p>
-        <p align="center">&copy;1995-2026 4D, Inc., 4D SAS and its Licensors.<br>
-          All rights reserved.</p>
-					</td>
-				</tr>
-			</table>
-		</div>
-	</body>
-
+    <h2 lang="en">4D Web Server Quotas demo</h2>
+    <p lang="en">See how Web Server quotas limit requests and sessions.</p>
+    <p lang="en">Open the <code>WebServerQuotas</code> form in the 4D project, then try these scenarios in separate browser tabs.</p>
+    <nav aria-label="Demo scenarios" lang="en">
+      <a href="./ticketingLogin.html">Start the ticketing demo</a>
+      <a class="secondary" href="./testQuotasTicketing.html">Open quota scenarios</a>
+    </nav>
+  </main>
+</body>
 </html>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file datatype="plaintext" original="ui" source-language="en" target-language="ja">
+    <body>
+      <trans-unit id="Menu_Demo" resname="Menu_Demo">
+        <source>Demo</source>
+        <target>デモ</target>
+      </trans-unit>
+      <trans-unit id="Quota_Apply" resname="Quota_Apply">
+        <source>Apply</source>
+        <target>適用</target>
+      </trans-unit>
+      <trans-unit id="Quota_Reset" resname="Quota_Reset">
+        <source>Reset</source>
+        <target>リセット</target>
+      </trans-unit>
+      <trans-unit id="Quota_Title" resname="Quota_Title">
+        <source>Update web server quotas</source>
+        <target>Web Server のクォータを更新</target>
+      </trans-unit>
+      <trans-unit id="Quota_TitleSession" resname="Quota_TitleSession">
+        <source>Update web server quotas (session level)</source>
+        <target>セッション単位で Web Server のクォータを更新</target>
+      </trans-unit>
+      <trans-unit id="Info_PageNumber" resname="Info_PageNumber">
+        <source>Page number:</source>
+        <target>ページ番号：</target>
+      </trans-unit>
+      <trans-unit id="Info_TabTitle" resname="Info_TabTitle">
+        <source>Tab Title:</source>
+        <target>タブタイトル：</target>
+      </trans-unit>
+      <trans-unit id="Info_Page" resname="Info_Page">
+        <source>Page:</source>
+        <target>ページ：</target>
+      </trans-unit>
+      <trans-unit id="Info_Title" resname="Info_Title">
+        <source>Title</source>
+        <target>タイトル</target>
+      </trans-unit>
+      <trans-unit id="Info_Description" resname="Info_Description">
+        <source>Description</source>
+        <target>説明</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

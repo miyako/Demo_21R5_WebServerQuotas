@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file datatype="plaintext" original="ui" source-language="en" target-language="en">
+    <body>
+      <trans-unit id="Menu_Demo" resname="Menu_Demo">
+        <source>Demo</source>
+        <target>Demo</target>
+      </trans-unit>
+      <trans-unit id="Quota_Apply" resname="Quota_Apply">
+        <source>Apply</source>
+        <target>Apply</target>
+      </trans-unit>
+      <trans-unit id="Quota_Reset" resname="Quota_Reset">
+        <source>Reset</source>
+        <target>Reset</target>
+      </trans-unit>
+      <trans-unit id="Quota_Title" resname="Quota_Title">
+        <source>Update web server quotas</source>
+        <target>Update web server quotas</target>
+      </trans-unit>
+      <trans-unit id="Quota_TitleSession" resname="Quota_TitleSession">
+        <source>Update web server quotas (session level)</source>
+        <target>Update web server quotas (session level)</target>
+      </trans-unit>
+      <trans-unit id="Info_PageNumber" resname="Info_PageNumber">
+        <source>Page number:</source>
+        <target>Page number:</target>
+      </trans-unit>
+      <trans-unit id="Info_TabTitle" resname="Info_TabTitle">
+        <source>Tab Title:</source>
+        <target>Tab Title:</target>
+      </trans-unit>
+      <trans-unit id="Info_Page" resname="Info_Page">
+        <source>Page:</source>
+        <target>Page:</target>
+      </trans-unit>
+      <trans-unit id="Info_Title" resname="Info_Title">
+        <source>Title</source>
+        <target>Title</target>
+      </trans-unit>
+      <trans-unit id="Info_Description" resname="Info_Description">
+        <source>Description</source>
+        <target>Description</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
