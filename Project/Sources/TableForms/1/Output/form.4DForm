@@ -165,7 +165,7 @@
 					"width": 64,
 					"height": 17,
 					"sizingX": "grow",
-					"text": "Page:"
+					"text": ":xliff:Info_Page"
 				},
 				"S2_Text": {
 					"type": "text",
@@ -174,7 +174,7 @@
 					"width": 240,
 					"height": 17,
 					"sizingX": "grow",
-					"text": "Title"
+					"text": ":xliff:Info_Title"
 				},
 				"Rectangle4": {
 					"type": "rectangle",
@@ -268,7 +268,7 @@
 					"width": 240,
 					"height": 17,
 					"sizingX": "grow",
-					"text": "Description"
+					"text": ":xliff:Info_Description"
 				},
 				"Splitter": {
 					"type": "splitter",

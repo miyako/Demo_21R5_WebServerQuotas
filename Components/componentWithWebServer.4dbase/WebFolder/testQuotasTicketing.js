@@ -1,4 +1,4 @@
-const BASE_URL = 'http://127.0.0.1/runDemo';
+const BASE_URL = '/runDemo';
 const stats = { total: 0, ok: 0, e429: 0 };
 let burstRunning = false;
 
@@ -6,8 +6,6 @@ const logEl = document.getElementById('log');
 const statTotalEl = document.getElementById('statTotal');
 const statOkEl = document.getElementById('statOk');
 const stat429El = document.getElementById('stat429');
-const nbSessionsEl = document.getElementById('nbSessions');
-const nbGuestSessionsEl = document.getElementById('nbGuestSessions');
 const visitorBurstProgressEl = document.getElementById('visitorBurstProgress');
 const btnVisitorBurstStart = document.getElementById('btnVisitorBurstStart');
 const btnVisitorBurstStop = document.getElementById('btnVisitorBurstStop');
@@ -18,7 +16,7 @@ const btnBurstGetStop = document.getElementById('btnBurstGetStop');
 
 function timestamp() {
   const date = new Date();
-  return date.toLocaleTimeString('en-GB', { hour12: false }) +
+  return date.toLocaleTimeString(undefined, { hour12: false }) +
     '.' + String(date.getMilliseconds()).padStart(3, '0');
 }
 
@@ -65,13 +63,15 @@ async function sendRequest({ method = 'GET', body = null, querySize = null } = {
     }
 
     const retryAfter = response.headers.get('Retry-After');
-    let details = `${timestamp()}  Done  →  status: ${response.status} - ${duration}ms - Response received from the server: ${receivedBytes} bytes`;
-    if (retryAfter !== null) details += `  Retry-After: "${retryAfter}"`;
+    let details = `${timestamp()}  ${window.demoText('Done')}  →  status: ${response.status} - ${duration}ms - ${window.demoText('Response received from the server: {size} bytes', { size: receivedBytes })}`;
+    if (retryAfter !== null) {
+      details += `  ${window.demoText('Retry-After: "{value}"', { value: retryAfter })}`;
+    }
 
     logLine(details, cssClass);
     updateStats();
   } catch (error) {
-    logLine(`${timestamp()}  ${method.padEnd(4)} ${url}  →  ERROR: ${error.message}`, 'lerr');
+    logLine(`${timestamp()}  ${method.padEnd(4)} ${url}  →  ${window.demoText('ERROR: {message}', { message: error.message })}`, 'lerr');
     updateStats();
   }
 }
@@ -84,7 +84,7 @@ async function runBurst({ prefix, type, progressEl, stopButton, count, delay }) 
   stopButton.disabled = false;
 
   for (let index = 1; index <= count && burstRunning; index++) {
-    progressEl.textContent = `Request ${index} / ${count}`;
+    progressEl.textContent = window.demoText('Request {index} / {count}', { index, count });
 
     let requestOptions = { method: 'GET' };
     if (type === 'POST') {
@@ -101,7 +101,7 @@ async function runBurst({ prefix, type, progressEl, stopButton, count, delay }) 
     }
   }
 
-  progressEl.textContent = burstRunning ? 'Burst completed' : 'Burst stopped';
+  progressEl.textContent = window.demoText(burstRunning ? 'Burst completed' : 'Burst stopped');
   burstRunning = false;
   btnVisitorBurstStart.disabled = false;
   if (btnBurstPostStart) btnBurstPostStart.disabled = false;
@@ -109,7 +109,6 @@ async function runBurst({ prefix, type, progressEl, stopButton, count, delay }) 
   btnVisitorBurstStop.disabled = true;
   if (btnBurstPostStop) btnBurstPostStop.disabled = true;
   if (btnBurstGetStop) btnBurstGetStop.disabled = true;
-  await loadSessionCounts();
 }
 
 function startBurst(prefix, type, progressEl, stopButton) {
@@ -135,7 +134,6 @@ btnBurstGetStart?.addEventListener('click', () => {
   startBurst('burstGet', 'GET_WITH_SIZE', document.getElementById('burstGetProgress'), btnBurstGetStop);
 });
 btnBurstGetStop?.addEventListener('click', () => stopBurst(btnBurstGetStop));
-document.getElementById('btnRefreshSessions')?.addEventListener('click', loadSessionCounts);
 document.getElementById('btnClearLog').addEventListener('click', () => {
   logEl.innerHTML = '';
   stats.total = 0;
@@ -143,5 +141,3 @@ document.getElementById('btnClearLog').addEventListener('click', () => {
   stats.e429 = 0;
   updateStats();
 });
-
-loadSessionCounts();

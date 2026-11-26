@@ -242,7 +242,7 @@
 					"width": 150,
 					"height": 17,
 					"textAlign": "right",
-					"text": "Page number:"
+					"text": ":xliff:Info_PageNumber"
 				},
 				"Text1": {
 					"type": "text",
@@ -251,7 +251,7 @@
 					"width": 150,
 					"height": 17,
 					"textAlign": "right",
-					"text": "Tab Title:"
+					"text": ":xliff:Info_TabTitle"
 				},
 				"Description1": {
 					"type": "input",

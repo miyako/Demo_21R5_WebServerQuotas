@@ -72,7 +72,7 @@
 				},
 				"Text27": {
 					"type": "text",
-					"text": "Apply",
+					"text": ":xliff:Quota_Apply",
 					"top": 329,
 					"left": 320,
 					"width": 120,
@@ -160,7 +160,7 @@
 					"stroke": "#289FE8",
 					"fontSize": 20,
 					"fontWeight": "bold",
-					"text": "Update web server quotas",
+					"text": ":xliff:Quota_Title",
 					"sizingX": "fixed",
 					"sizingY": "fixed"
 				},
@@ -223,7 +223,7 @@
 				},
 				"Text29": {
 					"type": "text",
-					"text": "Reset",
+					"text": ":xliff:Quota_Reset",
 					"top": 329,
 					"left": 460,
 					"width": 120,
@@ -357,7 +357,7 @@
 				},
 				"Text30": {
 					"type": "text",
-					"text": "Reset",
+					"text": ":xliff:Quota_Reset",
 					"top": 249,
 					"left": 460,
 					"width": 120,
@@ -371,7 +371,7 @@
 				},
 				"Text31": {
 					"type": "text",
-					"text": "Apply",
+					"text": ":xliff:Quota_Apply",
 					"top": 249,
 					"left": 320,
 					"width": 120,
@@ -433,7 +433,7 @@
 				},
 				"Text32": {
 					"type": "text",
-					"text": "Apply",
+					"text": ":xliff:Quota_Apply",
 					"top": 399,
 					"left": 320,
 					"width": 120,
@@ -479,7 +479,7 @@
 				},
 				"Text33": {
 					"type": "text",
-					"text": "Reset",
+					"text": ":xliff:Quota_Reset",
 					"top": 399,
 					"left": 460,
 					"width": 120,
@@ -620,7 +620,7 @@
 				},
 				"Text16": {
 					"type": "text",
-					"text": "Reset",
+					"text": ":xliff:Quota_Reset",
 					"top": 309,
 					"left": 300,
 					"width": 120,
@@ -634,7 +634,7 @@
 				},
 				"Text17": {
 					"type": "text",
-					"text": "Apply",
+					"text": ":xliff:Quota_Apply",
 					"top": 309,
 					"left": 160,
 					"width": 120,
@@ -666,7 +666,7 @@
 					"stroke": "#289FE8",
 					"fontSize": 20,
 					"fontWeight": "bold",
-					"text": "Update web server quotas (session level)",
+					"text": ":xliff:Quota_TitleSession",
 					"sizingX": "fixed",
 					"sizingY": "fixed"
 				},
